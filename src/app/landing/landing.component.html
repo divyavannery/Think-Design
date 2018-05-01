@@ -1,0 +1,133 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1 col-sm-12 form-wrapper">
+      <div class="row" id="form">
+      <div class="navigation-icon col-xs-1" (click)="back(t);">
+        prev
+      </div>
+      <div class="col-xs-10">
+          <div class="row">
+              <div class="col-sm-12 slider-wrapper">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" 
+                      data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                    </div>
+                    <div class="col-sm-6">
+                      <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0"
+                       data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
+                    </div>
+                  </div>
+              </div>
+                 
+            </div>
+            <div class="row tab-container">
+      <ngb-tabset #t="ngbTabset" type="pills">
+        <ngb-tab id="0">
+          <ng-template ngbTabTitle class="tab-title"><span class="circle">1</span><span class="title-text">Personal Information</span></ng-template>
+          <ng-template ngbTabContent class="template-container">
+            <div class="row col-sm-12 title">
+               <div class="col-sm-12"><p>Personal Data</p>
+                <div class="line"></div>
+              </div>
+              
+            </div>
+           
+              <form [formGroup]="form" class="row">
+                    <div class="row">
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">Name:
+                          <input class="form-control" formControlName="name">
+                        </label>
+                      </div>
+              
+                
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">Surname:
+                          <input class="form-control" formControlName="surname">
+                        </label>
+                      </div>
+                
+                
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">Second Surname:
+                          <input class="form-control" formControlName="secondSurname">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">DNI/NIE:
+                          <input class="form-control" formControlName="DNI">
+                        </label>
+                      </div>
+              
+                
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">Date of Birth:
+                          <input class="form-control" formControlName="DOB">
+                        </label>
+                      </div>
+                
+                
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">Gender:
+                          <input class="form-control" formControlName="gender">
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">Email Id:
+                          <input class="form-control" formControlName="email">
+                        </label>
+                      </div>
+              
+                
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">Mobile Number:
+                          <input class="form-control" formControlName="mobile">
+                        </label>
+                      </div>
+                
+                
+                    <div class="form-group  col-sm-4 group">
+                        <label class="center-block">Telephone Number:
+                          <input class="form-control" formControlName="telephone">
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-sm-offset-8 button-wrapper">
+                            <button type="submit"
+                            [disabled]="form.pristine" class="btn">Continue</button> 
+                          </div>
+                    </div>
+              </form>
+           
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab id="1">
+          <ng-template ngbTabTitle class="tab-title"><span class="circle">2</span><span class="title-text">Financial Information</span></ng-template>
+          <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
+            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+            craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl
+            cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
+            yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean
+            shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
+            sint qui sapiente accusamus tattooed echo park.</p>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+    </div>
+      <div class="navigation-icon col-xs-1" (click)="changeTab(t);">
+       next
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+
+
